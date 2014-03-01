@@ -1,5 +1,7 @@
 python manage.py collectstatic
 
+python manage.py runserver --nostatic
+
 urlpatterns += patterns('',
     (r'^static/suit/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.DJANGO_SUIT_TEMPLATE}),
 )
